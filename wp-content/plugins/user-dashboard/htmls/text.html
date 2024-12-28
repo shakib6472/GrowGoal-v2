@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Certificate with QR Code</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            max-width: 1650px; /* Original width */
+            margin: 0 auto;
+        }
+        canvas {
+            width: 100%; /* Make canvas responsive */
+            height: auto; /* Maintain aspect ratio */
+            border: 10px solid #00b7b7;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate Design</h1>
+    <div class="canvas-container">
+        <canvas id="certificateCanvas" width="1650" height="1272"></canvas>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('certificateCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawCertificate() {
+            // Clear the canvas before drawing
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Set background color and design (a soft gradient)
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+            gradient.addColorStop(0, '#f5fafa');
+            gradient.addColorStop(1, '#e6f3f3');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the certificate title (Certificate)
+            ctx.font = 'bold 80px Gothic';
+            ctx.fillStyle = '#000';
+            ctx.textAlign = 'center';
+            ctx.fillText('Certificate', canvas.width / 2, 200);
+
+            // Subtitle (This is to certify that)
+            ctx.font = '40px Arial';
+            ctx.fillStyle = '#555';
+            ctx.fillText('This is to certify that', canvas.width / 2, 300);
+
+            // Recipient's name
+            ctx.font = 'bold 60px Arial';
+            ctx.fillStyle = '#000';
+            ctx.fillText('Shakib Shown', canvas.width / 2, 400);
+
+            // Certificate line
+            ctx.beginPath();
+            ctx.moveTo(450, 430);
+            ctx.lineTo(1200, 430);
+            ctx.strokeStyle = '#000';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Text below name (Successfully obtained a Certificate in)
+            ctx.font = '40px Arial';
+            ctx.fillStyle = '#555';
+            ctx.fillText('Successfully obtained a Certificate in', canvas.width / 2, 500);
+
+            // Course name
+            ctx.font = 'bold 50px Arial';
+            ctx.fillStyle = '#000';
+            ctx.fillText('Engagement In The Workplace', canvas.width / 2, 600);
+
+            // Director signature and title
+            ctx.font = 'italic 40px Arial';
+            ctx.fillStyle = '#000';
+            ctx.fillText('Megan Smith', 400, 900);
+            ctx.fillText('Course Director', 400, 950);
+
+            // Date section
+            ctx.font = '40px Arial';
+            ctx.fillText('2024-10-14', 1200, 900);
+            ctx.fillText('Date of Award', 1200, 950);
+
+            // Optional: Load images (e.g., logo, QR code, signature) if needed
+            const logo = new Image();
+            logo.src = 'https://growgoal.online/wp-content/uploads/2024/10/image.png';  // Example URL
+            logo.onload = function() {
+                ctx.drawImage(logo, 100, 100, 200, 200);  // Position and size for the logo
+            };
+
+            // Load the QR Code image
+            const qrCode = new Image();
+            qrCode.src = 'https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://example.com&choe=UTF-8';  // Example QR code URL
+            qrCode.onload = function() {
+                // Adjust the size and position of the QR code to keep it responsive
+                const qrWidth = 150;  // Set the width of the QR code
+                const qrHeight = 150;  // Set the height of the QR code
+                ctx.drawImage(qrCode, canvas.width - 250, 100, qrWidth, qrHeight);  // Position and size for the QR code
+            };
+        }
+
+        // Call the function to draw the certificate
+        drawCertificate();
+
+        // Make the canvas responsive
+        window.addEventListener('resize', () => {
+            const aspectRatio = canvas.width / canvas.height;
+            canvas.style.height = canvas.offsetWidth / aspectRatio + 'px';
+        });
+    </script>
+</body>
+</html>

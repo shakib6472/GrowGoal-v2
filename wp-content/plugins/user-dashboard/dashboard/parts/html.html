@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/46882cce5e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        display: flex;
+        background-color: #000;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center vh-100"
+    >
+      <div class="link-box p-4">
+        <div class="mb-3">
+          <label for="lesson-link" class="form-label lesson-label"
+            >Lesson:</label
+          >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control lesson-input"
+              value="https://lessonlink.com"
+              id="lesson-link"
+              disabled
+            />
+            <button
+              class="btn btn-outline-secondary link-icon"
+              data-copy-target="#lesson-link"
+            >
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="practice-link" class="form-label practice-label"
+            >Practice:</label
+          >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control practice-input"
+              value="https://practicelink.com"
+              id="practice-link"
+              disabled
+            />
+            <button
+              class="btn btn-outline-secondary link-icon"
+              data-copy-target="#practice-link"
+            >
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+      <div
+        id="copyToast"
+        class="toast align-items-center text-white bg-primary border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">Copied to clipboard!</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // Function to copy text to clipboard using jQuery
+        $(".link-icon").click(function () {
+          var copyTarget = $(this).data("copy-target"); // Get the target input field
+          var $tempInput = $("<input>");
+          $("body").append($tempInput);
+          $tempInput.val($(copyTarget).val()).select();
+          document.execCommand("copy");
+          $tempInput.remove();
+
+          // Show the toast notification
+          var toast = new bootstrap.Toast($("#copyToast"));
+          toast.show();
+        });
+      });
+    </script>
+  </body>
+</html>
