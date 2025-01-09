@@ -63,7 +63,7 @@ class Module extends BaseModule {
 		$custom_logo_src = wp_get_attachment_image_src( $custom_site_logo_id, 'full' );
 		$site_name = get_option( 'blogname', '' );
 
-		$hello_theme = wp_get_theme( 'growgoal' );
+		$hello_theme = wp_get_theme( 'hello-elementor' );
 		$hello_theme_errors = is_object( $hello_theme->errors() ) ? $hello_theme->errors()->errors : [];
 
 		/** @var Library $library */
@@ -76,7 +76,7 @@ class Module extends BaseModule {
 			'isLibraryConnected' => $library->is_connected(),
 			// Used to check if the Hello Elementor theme is installed but not activated.
 			'helloInstalled' => empty( $hello_theme_errors['theme_not_found'] ),
-			'helloActivated' => 'growgoal' === get_option( 'template' ),
+			'helloActivated' => 'hello-elementor' === get_option( 'template' ),
 			// The "Use Hello theme on my site" checkbox should be checked by default only if this condition is met.
 			'helloOptOut' => count( $pages_and_posts->posts ) < 5,
 			'siteName' => esc_html( $site_name ),
@@ -318,7 +318,7 @@ class Module extends BaseModule {
 			return $this->get_permission_error_response();
 		}
 
-		switch_theme( 'growgoal' );
+		switch_theme( 'hello-elementor' );
 
 		return [
 			'status' => 'success',
