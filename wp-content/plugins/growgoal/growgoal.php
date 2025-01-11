@@ -28,6 +28,7 @@ if (!class_exists('GrowGoal')) {
 } 
 // add style and script
 function growgoal_enqueue_scripts() {
+	wp_enqueue_style('growgoal-frontend-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/frontend.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('growgoal-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/styles.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('growgoal-tailwind-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/tailwind.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('growgoal-fontowsome-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', array(), '1.0.0', 'all');

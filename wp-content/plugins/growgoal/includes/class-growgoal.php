@@ -30,7 +30,10 @@
     public function register_elementor_widget($widgets_manager) {
         // Elementor widget registration code here
         require_once GROWGOAL_PLUGIN_DIR . 'elementor/login-form.php';
+        require_once GROWGOAL_PLUGIN_DIR . 'elementor/student-registration.php';
+        
         $widgets_manager->register( new \GrowGoal_login_form() );
+        $widgets_manager->register( new \GrowGoal_student_registration() );
 
     }
 }

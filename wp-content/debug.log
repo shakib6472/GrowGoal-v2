@@ -1,343 +1,70 @@
-[08-Jan-2025 19:39:46 UTC] GrowGoal class initialized
-[08-Jan-2025 19:39:58 UTC] GrowGoal class initialized
-[08-Jan-2025 19:41:47 UTC] GrowGoal class initialized
-[08-Jan-2025 19:41:59 UTC] GrowGoal class initialized
-[08-Jan-2025 19:43:48 UTC] GrowGoal class initialized
-[08-Jan-2025 19:44:00 UTC] GrowGoal class initialized
-[08-Jan-2025 19:44:59 UTC] GrowGoal class initialized
-[08-Jan-2025 19:46:00 UTC] GrowGoal class initialized
-[08-Jan-2025 19:46:01 UTC] GrowGoal class initialized
-[08-Jan-2025 19:48:01 UTC] GrowGoal class initialized
-[08-Jan-2025 19:48:02 UTC] GrowGoal class initialized
-[08-Jan-2025 19:50:02 UTC] GrowGoal class initialized
-[08-Jan-2025 19:50:03 UTC] GrowGoal class initialized
-[08-Jan-2025 19:52:03 UTC] GrowGoal class initialized
-[08-Jan-2025 19:52:04 UTC] GrowGoal class initialized
-[08-Jan-2025 19:54:04 UTC] GrowGoal class initialized
-[08-Jan-2025 19:54:04 UTC] GrowGoal class initialized
-[08-Jan-2025 19:54:05 UTC] GrowGoal class initialized
-[08-Jan-2025 19:56:06 UTC] GrowGoal class initialized
-[08-Jan-2025 19:57:10 UTC] GrowGoal class initialized
-[08-Jan-2025 19:58:07 UTC] GrowGoal class initialized
-[08-Jan-2025 20:00:08 UTC] GrowGoal class initialized
-[08-Jan-2025 20:01:45 UTC] GrowGoal class initialized
-[08-Jan-2025 20:02:09 UTC] GrowGoal class initialized
-[08-Jan-2025 20:02:33 UTC] GrowGoal class initialized
-[08-Jan-2025 20:02:51 UTC] GrowGoal class initialized
-[08-Jan-2025 20:03:17 UTC] GrowGoal class initialized
-[08-Jan-2025 20:04:10 UTC] GrowGoal class initialized
-[08-Jan-2025 20:06:05 UTC] GrowGoal class initialized
-[08-Jan-2025 20:06:05 UTC] growgoal_verify_login:Array
+[10-Jan-2025 05:20:59 UTC] GrowGoal class initialized
+[10-Jan-2025 05:21:34 UTC] GrowGoal class initialized
+[10-Jan-2025 05:21:54 UTC] GrowGoal class initialized
+[10-Jan-2025 05:23:29 UTC] GrowGoal class initialized
+[10-Jan-2025 05:23:35 UTC] GrowGoal class initialized
+[10-Jan-2025 05:23:45 UTC] GrowGoal class initialized
+[10-Jan-2025 05:23:45 UTC] growgoal_student_registration:Array
 (
-    [username] => parves
+    [firstName] => Shakib
+    [lastName] => Shown
+    [email] => shakib6472@hotmail.com
+    [dob] => 2019-12-26
     [password] => parvesii844
-    [security] => a175b88425
-    [action] => growgoal_verify_login
+    [confirm_password] => parvesii844
+    [security] => af9375e860
+    [action] => growgoal_student_registration
 )
 
-[08-Jan-2025 20:06:05 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:06:11 UTC] GrowGoal class initialized
-[08-Jan-2025 20:06:29 UTC] GrowGoal class initialized
-[08-Jan-2025 20:06:52 UTC] GrowGoal class initialized
-[08-Jan-2025 20:06:52 UTC] growgoal_verify_login:Array
+[10-Jan-2025 05:23:45 UTC] growgoal_verify_login: nonce verified
+[10-Jan-2025 05:24:36 UTC] GrowGoal class initialized
+[10-Jan-2025 05:26:37 UTC] GrowGoal class initialized
+[10-Jan-2025 05:27:33 UTC] GrowGoal class initialized
+[10-Jan-2025 05:27:47 UTC] GrowGoal class initialized
+[10-Jan-2025 05:27:47 UTC] growgoal_student_registration:Array
 (
-    [username] => Golden_Admin
-    [password] => fovjib_robxev_Dozmi4
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:06:52 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:07:36 UTC] GrowGoal class initialized
-[08-Jan-2025 20:07:41 UTC] GrowGoal class initialized
-[08-Jan-2025 20:07:41 UTC] growgoal_verify_login:Array
-(
-    [username] => admin_bissojit
-    [password] => z$od7Y0zXI0lEDD(n)Ml1Uss
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:07:41 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:07:58 UTC] GrowGoal class initialized
-[08-Jan-2025 20:07:58 UTC] growgoal_verify_login:Array
-(
-    [username] => admin_bissojit
-    [password] => z$od7Y0zXI0lEDD(n)Ml1Uss
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:07:58 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:08:12 UTC] GrowGoal class initialized
-[08-Jan-2025 20:08:24 UTC] GrowGoal class initialized
-[08-Jan-2025 20:08:33 UTC] GrowGoal class initialized
-[08-Jan-2025 20:08:38 UTC] GrowGoal class initialized
-[08-Jan-2025 20:08:38 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:08:38 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:09:08 UTC] GrowGoal class initialized
-[08-Jan-2025 20:09:15 UTC] GrowGoal class initialized
-[08-Jan-2025 20:09:15 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:09:15 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:09:37 UTC] GrowGoal class initialized
-[08-Jan-2025 20:09:53 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:00 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:01 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:09 UTC] GrowGoal class initialized
-[08-Jan-2025 20:10:09 UTC] growgoal_verify_login:Array
-(
-    [username] => 275
-    [password] => SWO%1WOK&$DUioaph2
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:10:09 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:10:12 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:01 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:07 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:19 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:19 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:11:19 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:11:46 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:49 UTC] GrowGoal class initialized
-[08-Jan-2025 20:11:49 UTC] growgoal_verify_login:Array
-(
-    [username] => AKawsar
-    [password] => e&LB#5unzvP-XV9
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:11:49 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:12:13 UTC] GrowGoal class initialized
-[08-Jan-2025 20:13:01 UTC] GrowGoal class initialized
-[08-Jan-2025 20:13:06 UTC] GrowGoal class initialized
-[08-Jan-2025 20:13:09 UTC] GrowGoal class initialized
-[08-Jan-2025 20:13:09 UTC] growgoal_verify_login:Array
-(
-    [username] => parves
+    [firstName] => Shakib
+    [lastName] => Shown
+    [email] => shakib6472@hotmail.com
+    [dob] => 2019-12-18
     [password] => parvesii844
-    [security] => a175b88425
-    [action] => growgoal_verify_login
+    [confirm_password] => parvesii844
+    [security] => af9375e860
+    [action] => growgoal_student_registration
 )
 
-[08-Jan-2025 20:13:09 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:14:14 UTC] GrowGoal class initialized
-[08-Jan-2025 20:15:02 UTC] GrowGoal class initialized
-[08-Jan-2025 20:15:23 UTC] GrowGoal class initialized
-[08-Jan-2025 20:16:01 UTC] GrowGoal class initialized
-[08-Jan-2025 20:16:15 UTC] GrowGoal class initialized
-[08-Jan-2025 20:17:03 UTC] GrowGoal class initialized
-[08-Jan-2025 20:18:16 UTC] GrowGoal class initialized
-[08-Jan-2025 20:19:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:19:41 UTC] GrowGoal class initialized
-[08-Jan-2025 20:20:17 UTC] GrowGoal class initialized
-[08-Jan-2025 20:22:11 UTC] GrowGoal class initialized
-[08-Jan-2025 20:22:12 UTC] growgoal_verify_login:Array
+[10-Jan-2025 05:27:47 UTC] growgoal_verify_login: nonce verified
+[10-Jan-2025 05:28:09 UTC] GrowGoal class initialized
+[10-Jan-2025 05:28:38 UTC] GrowGoal class initialized
+[10-Jan-2025 05:28:44 UTC] GrowGoal class initialized
+[10-Jan-2025 05:28:44 UTC] growgoal_student_registration:Array
 (
-    [username] => AKawsar
-    [password] => e&LB#5unzvP-XV9
-    [security] => a175b88425
-    [action] => growgoal_verify_login
+    [firstName] => Shakib
+    [lastName] => Shown
+    [email] => shakib6472@hotmail.com
+    [dob] => 2019-12-26
+    [password] => Parvesii#844
+    [confirm_password] => Parvesii#844
+    [security] => af9375e860
+    [action] => growgoal_student_registration
 )
 
-[08-Jan-2025 20:22:12 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:22:22 UTC] GrowGoal class initialized
-[08-Jan-2025 20:22:32 UTC] GrowGoal class initialized
-[08-Jan-2025 20:23:49 UTC] GrowGoal class initialized
-[08-Jan-2025 20:23:59 UTC] GrowGoal class initialized
-[08-Jan-2025 20:24:12 UTC] GrowGoal class initialized
-[08-Jan-2025 20:24:14 UTC] GrowGoal class initialized
-[08-Jan-2025 20:24:22 UTC] GrowGoal class initialized
-[08-Jan-2025 20:25:00 UTC] GrowGoal class initialized
-[08-Jan-2025 20:25:13 UTC] GrowGoal class initialized
-[08-Jan-2025 20:25:25 UTC] GrowGoal class initialized
-[08-Jan-2025 20:25:25 UTC] growgoal_verify_login:Array
+[10-Jan-2025 05:28:44 UTC] growgoal_verify_login: nonce verified
+[10-Jan-2025 05:29:40 UTC] GrowGoal class initialized
+[10-Jan-2025 05:29:50 UTC] GrowGoal class initialized
+[10-Jan-2025 05:29:50 UTC] growgoal_student_registration:Array
 (
-    [username] => RadhaKrishno
-    [password] => RadhaKrishno
-    [security] => a175b88425
-    [action] => growgoal_verify_login
+    [firstName] => Shakib
+    [lastName] => Shown
+    [email] => shakib6472@hotmail.com
+    [dob] => 2019-12-04
+    [password] => #)1V@hX*Dl42TSw^Hn*hhJ7*
+    [confirm_password] => #)1V@hX*Dl42TSw^Hn*hhJ7*
+    [security] => af9375e860
+    [action] => growgoal_student_registration
 )
 
-[08-Jan-2025 20:25:25 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:26:18 UTC] GrowGoal class initialized
-[08-Jan-2025 20:26:23 UTC] GrowGoal class initialized
-[08-Jan-2025 20:26:23 UTC] growgoal_verify_login:Array
-(
-    [username] => RadhaKrishno
-    [password] => RadhaKrishno
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:26:23 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:26:23 UTC] GrowGoal class initialized
-[08-Jan-2025 20:27:29 UTC] GrowGoal class initialized
-[08-Jan-2025 20:27:33 UTC] GrowGoal class initialized
-[08-Jan-2025 20:27:33 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:27:33 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:28:11 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:16 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:16 UTC] growgoal_verify_login:Array
-(
-    [username] => admin
-    [password] => 3yq3*2Gbcwz%RurB
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:28:16 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:28:24 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:28 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:33 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:33 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:34 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:37 UTC] GrowGoal class initialized
-[08-Jan-2025 20:28:38 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:28:38 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:29:41 UTC] GrowGoal class initialized
-[08-Jan-2025 20:30:20 UTC] GrowGoal class initialized
-[08-Jan-2025 20:30:25 UTC] GrowGoal class initialized
-[08-Jan-2025 20:30:29 UTC] GrowGoal class initialized
-[08-Jan-2025 20:30:29 UTC] growgoal_verify_login:Array
-(
-    [username] => academy
-    [password] => Academy@#Shakib@#2024
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:30:29 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:30:41 UTC] GrowGoal class initialized
-[08-Jan-2025 20:30:41 UTC] growgoal_verify_login:Array
-(
-    [username] => admin
-    [password] => 3yq3*2Gbcwz%RurBdasf
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:30:41 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:30:59 UTC] GrowGoal class initialized
-[08-Jan-2025 20:31:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:31:04 UTC] growgoal_verify_login:Array
-(
-    [username] => admin
-    [password] => 3yq3*2Gbcwz%RurBadsfas
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:31:04 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:31:42 UTC] GrowGoal class initialized
-[08-Jan-2025 20:32:00 UTC] GrowGoal class initialized
-[08-Jan-2025 20:32:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:32:04 UTC] growgoal_verify_login:Array
-(
-    [username] => admin_bissojit
-    [password] => z$od7Y0zXI0lEDD(n)Ml1Uss
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:32:04 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:33:00 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:04 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:04 UTC] growgoal_verify_login:Array
-(
-    [username] => admin_bissojit
-    [password] => z$od7Y0zXI0lEDD(n)Ml1Uss
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:33:04 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:33:07 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:08 UTC] growgoal_verify_login:Array
-(
-    [username] => arfaan
-    [password] => DXkcXO)v2efxCKUGim
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:33:08 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:33:12 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:12 UTC] growgoal_verify_login:Array
-(
-    [username] => admin
-    [password] => 3yq3*2Gbcwz%RurB
-    [security] => a175b88425
-    [action] => growgoal_verify_login
-)
-
-[08-Jan-2025 20:33:12 UTC] growgoal_verify_login: nonce verified
-[08-Jan-2025 20:33:13 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:13 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:13 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:24 UTC] GrowGoal class initialized
-[08-Jan-2025 20:33:26 UTC] GrowGoal class initialized
-[09-Jan-2025 18:31:56 UTC] GrowGoal class initialized
-[09-Jan-2025 18:31:58 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:03 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:06 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:06 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:35 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:35 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:38 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:39 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:40 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:41 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:49 UTC] GrowGoal class initialized
-[09-Jan-2025 18:32:49 UTC] GrowGoal class initialized
-[09-Jan-2025 18:33:00 UTC] GrowGoal class initialized
+[10-Jan-2025 05:29:50 UTC] growgoal_verify_login: nonce verified
+[10-Jan-2025 05:30:25 UTC] GrowGoal class initialized
+[11-Jan-2025 04:03:18 UTC] GrowGoal class initialized
+[11-Jan-2025 04:03:19 UTC] GrowGoal class initialized
