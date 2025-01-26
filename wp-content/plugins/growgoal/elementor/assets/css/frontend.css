@@ -46,3 +46,33 @@
 		box-shadow: 0 0 0 40px #0000;
 	}
 }
+
+
+.fc-h-event .fc-event-main-frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	justify-content: center;
+	margin-bottom: 4px;
+}
+.fc-h-event .fc-event-main-frame * {
+	margin: 0;
+	padding: 0;
+	line-height: 15px;
+	font-size: 11px;
+	
+}
+
+a.event-class .fc-event-main-frame{
+	background-color: #9071ebc6;
+	padding: 2px 4px;
+	border-radius: 50px;
+	
+}
+a.meeting .fc-event-main-frame{
+	background-color: #48d794d4;
+	padding: 2px 4px;
+	border-radius: 50px;
+}
+
+

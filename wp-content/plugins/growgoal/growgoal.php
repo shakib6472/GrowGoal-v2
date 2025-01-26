@@ -25,9 +25,10 @@ if (!class_exists('GrowGoal')) {
 	include_once GROWGOAL_PLUGIN_DIR . 'includes/class-growgoal.php';
 	//ajax handler
 	include_once GROWGOAL_PLUGIN_DIR . 'includes/class-growgoal-ajax.php';
-} 
+}
 // add style and script
-function growgoal_enqueue_scripts() {
+function growgoal_enqueue_scripts()
+{
 	wp_enqueue_style('growgoal-frontend-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/frontend.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('growgoal-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/styles.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('growgoal-tailwind-style', GROWGOAL_PLUGIN_URL . 'elementor/assets/css/tailwind.css', array(), '1.0.0', 'all');
@@ -47,8 +48,11 @@ function growgoal_enqueue_scripts() {
 		'home_url' => home_url(),
 		'admin_url' => admin_url(),
 	));
-
 }
 add_action('wp_enqueue_scripts', 'growgoal_enqueue_scripts');
 
 new GrowGoal(__FILE__);
+
+
+
+

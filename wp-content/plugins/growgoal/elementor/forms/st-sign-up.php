@@ -96,7 +96,7 @@
               Date of Birth
             </label>
             <div class="twg-relative twg-text-light-300">
-                <input
+              <input
                 required
                 type="date"
                 name="dob"
