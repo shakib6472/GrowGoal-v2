@@ -79,7 +79,7 @@
                  </div>
              </div>
              <div class="tabs-content twg-mt-5">
-                 <div class="tab-content" id="all-tab" style="display: ">
+                 <div class="tab-content" id="all-tab">
                      <div class="twg-relative twg-overflow-x-auto twg-pb-3 twg-pr-2px">
                          <table class="twg-w-full twg-whitespace-nowrap twg-border-separate twg-border-spacing-0 twg-text-left twg-bg-white twg-rounded-lg">
                              <thead class="twg-bg-light-400">
