@@ -21,6 +21,8 @@
 :root {
   --primary-100: 116, 77, 230;
   --primary-200: 5, 132, 244;
+  --primary-300: 226, 232, 240;
+  --primary-400: 229, 231, 235;
   --dark-100: 0, 0, 0;
   --dark-200: 36, 36, 36;
   --light-100: 204, 204, 204;
@@ -31,6 +33,7 @@
   --light-600: 181, 181, 181;
   --light-700: 117, 117, 117;
   --light-800: 147, 147, 147;
+  --light-900: 152, 152, 152;
   --secondary-100: 250, 219, 92;
   --secondary-200: 250, 149, 243;
   --secondary-300: 82, 82, 83;
@@ -39,12 +42,16 @@
   --secondary-600: 248, 246, 255;
   --secondary-700: 238, 234, 255;
   --secondary-800: 226, 226, 226;
+  --secondary-900: 229, 229, 229;
   --accent-100: 255, 255, 255;
   --accent-200: 237, 237, 237;
   --accent-300: 211, 211, 211;
   --accent-400: 128, 128, 128;
   --accent-500: 239, 239, 239;
   --accent-600: 222, 222, 222;
+  --accent-700: 157, 157, 157;
+  --accent-800: 115, 115, 117;
+  --accent-900: 245, 245, 245;
   --success-100: 13, 203, 66;
   --success-200: 39, 222, 191;
   --success-300: 219, 255, 249;
@@ -264,4 +271,151 @@ select {
 .auth-slider-pagination
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   @apply !twg-bg-[#F2ECFF];
+}
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+#diary_calendar .fc-header-toolbar .fc-toolbar-chunk {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#diary_calendar .fc-header-toolbar .fc-toolbar-chunk .fc-toolbar-title {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+#diary_calendar
+  .fc-header-toolbar
+  .fc-toolbar-chunk
+  .fc-button-group
+  .fc-button-primary {
+  background-color: rgba(var(--dark-100), 0.1);
+  height: 28px;
+  width: 28px;
+  padding: 0;
+  border: none;
+  color: rgba(var(--dark-100), 1);
+  outline: none !important;
+  box-shadow: none !important;
+}
+#diary_calendar .fc-header-toolbar .fc-toolbar-chunk .fc-button-group {
+  gap: 5px;
+}
+#diary_calendar .fc-header-toolbar .fc-toolbar-chunk .calendar-timezone-select {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+#diary_calendar .fc-scrollgrid {
+  /* border-radius: 12px; */
+  overflow: hidden;
+}
+#diary_calendar .fc-day-today .fc-col-header-cell-cushion {
+  background-color: rgba(var(--primary-100), 1);
+  color: rgba(var(--accent-100), 1);
+}
+#diary_calendar .fc-col-header-cell-cushion {
+  word-spacing: 999px;
+  /* width: 53px;
+  height: 53px; */
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+#diary_calendar.fc-theme-standard .fc-timegrid-axis,
+#diary_calendar.fc-theme-standard .fc-col-header-cell {
+  border: none !important;
+}
+#diary_calendar .fc-timegrid-slot-label {
+  border: none !important;
+}
+#diary_calendar .fc-timegrid-slot-label-cushion {
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+#diary_calendar.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 10px !important;
+}
+#diary_calendar.fc .fc-timegrid-col.fc-day-today {
+  background-color: transparent;
+}
+#diary_calendar.fc .fc-event-main-frame {
+  justify-content: center;
+  align-items: center;
+}
+#diary_calendar.fc .fc-event-main-frame .fc-event-time,
+#diary_calendar.fc .fc-event-main-frame .fc-event-title {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+#diary_calendar.fc .fc-event-main-frame .fc-event-title-container {
+  flex-grow: unset;
+}
+#diary_calendar.fc .fc-event {
+  border-radius: 0 !important;
+}
+/* #diary_calendar .fc-scrollgrid,
+#diary_calendar.fc
+  .fc-scrollgrid-section.fc-scrollgrid-section-body
+  td[role="presentation"] {
+  border-color: rgba(var(--dark-100), 1) !important;
+} */
+
+@media (max-width: 768px) {
+  #diary_calendar.fc .fc-toolbar.fc-header-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #diary_calendar .fc-header-toolbar .fc-toolbar-chunk {
+    width: 100%;
+    justify-content: space-between;
+  }
+  #diary_calendar
+    .fc-header-toolbar
+    .fc-toolbar-chunk
+    .calendar-timezone-select {
+    padding-left: 0;
+    font-size: 14px;
+  }
+  #diary_calendar.fc .fc-list-event-title a,
+  #diary_calendar .fc-list-event-time {
+    font-size: 14px;
+  }
+}
+
+.twg-right-bar {
+  @apply lg:twg-max-w-310px;
+}
+
+.confirm_course_note_text_group .ck-editor__editable {
+  height: 120px;
+  box-shadow: none !important;
+  font-size: 13px;
+}
+.confirm_course_note_text_group .ck.ck-toolbar {
+  background-color: #f1f5f9 !important;
+}
+.confirm_course_note_text_group .ck.ck-content.ck-editor__editable {
+  border-bottom-right-radius: 6px !important;
+  border-bottom-left-radius: 6px !important;
+}
+
+.twg-vault-tab-btn.active {
+  color: rgba(var(--primary-100), 1);
+}
+.twg-vault-tab-btn.active .tab-indicator {
+  width: 100%;
+}
+.lottie-dashboard-animation {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 999;
 }

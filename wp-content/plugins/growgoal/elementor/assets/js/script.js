@@ -209,6 +209,317 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   };
+  const setupTabsHandlers = () => {
+    // Get all buttons and tab contents
+    const tabButtons = document.querySelectorAll(".twg-tabs-button");
+    const tabContents = document.querySelectorAll(".twg-settings-tabs");
+
+    // Add click event listener to each tab button
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons
+        tabButtons.forEach((btn) => removeClass(btn, "active"));
+
+        // Hide all tab contents
+        tabContents.forEach((content) => removeClass(content, "active"));
+
+        // Add 'active' class to the clicked button
+        addClass(button, "active");
+
+        // Get the target tab content ID
+        const targetId = button.getAttribute("data-target");
+
+        // Find and show the target tab content
+        const targetContent = document.querySelector(`#${targetId}`);
+        if (targetContent) {
+          addClass(targetContent, "active");
+        }
+      });
+    });
+  };
+  const accordionButtons = document.querySelectorAll(".accordion-btn");
+
+  accordionButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const parent = button.parentElement; // The parent accordion item
+      const content = parent.querySelector(".accordion-content"); // Current accordion content
+      const allContents =
+        parent.parentElement.querySelectorAll(".accordion-content"); // Siblings' content
+      const arrowIcon = button.querySelector(".icon-arrow");
+
+      // Close all other accordions in the same wrapper
+      allContents.forEach((item) => {
+        if (item !== content) {
+          item.style.height = "0";
+          const siblingButton =
+            item.previousElementSibling.querySelector(".icon-arrow");
+          if (siblingButton) siblingButton.style.transform = "rotate(0deg)";
+        }
+      });
+
+      // Toggle current accordion
+      if (content.style.height === "0px" || content.style.height === "") {
+        content.style.height = `${content.scrollHeight}px`; // Set to full height
+        arrowIcon.style.transform = "rotate(180deg)"; // Rotate arrow
+      } else {
+        content.style.height = "0"; // Collapse
+        arrowIcon.style.transform = "rotate(0deg)"; // Reset arrow
+      }
+    });
+  });
+
+  // Initialize the calendar 
+  const calendarDiaryCalendar = document.getElementById("diary_calendar");
+
+  if (calendarDiaryCalendar) {
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay(); // Get current day (0 = Sunday, 1 = Monday, etc.)
+    const startOfWeek = new Date(
+      currentDate.setDate(currentDate.getDate() - currentDay)
+    ); // Set to the start of the week (Sunday)
+    const endOfWeek = new Date(
+      currentDate.setDate(currentDate.getDate() + (6 - currentDay))
+    ); // Set to the end of the week (Saturday)
+
+    const formatDate = (date) => date.toISOString().split("T")[0];
+    const commonEvent = {
+      title: "UX Research Class",
+      backgroundColor: "#c7d2fe",
+      borderColor: "#c7d2fe",
+      textColor: "#000",
+    };
+
+    const events = [
+      {
+        ...commonEvent,
+        start: `${formatDate(new Date(startOfWeek))}T10:00:00`,
+        end: `${formatDate(new Date(startOfWeek))}T11:30:00`,
+      },
+      {
+        ...commonEvent,
+        start: `${formatDate(
+          new Date(startOfWeek.setDate(startOfWeek.getDate() + 1))
+        )}T10:00:00`,
+        end: `${formatDate(new Date(startOfWeek))}T11:30:00`,
+      },
+      {
+        title: "Individual Session with John",
+        start: `${formatDate(
+          new Date(startOfWeek.setDate(startOfWeek.getDate() + 1))
+        )}T14:00:00`,
+        end: `${formatDate(new Date(startOfWeek))}T15:30:00`,
+        backgroundColor: "#fde68a",
+        borderColor: "#fde68a",
+        textColor: "#78350f",
+      },
+      {
+        title: "Math Class for Group A",
+        start: `${formatDate(
+          new Date(startOfWeek.setDate(startOfWeek.getDate() + 1))
+        )}T16:00:00`,
+        end: `${formatDate(new Date(startOfWeek))}T18:00:00`,
+        backgroundColor: "#c4b5fd",
+        borderColor: "#c4b5fd",
+        textColor: "#fff",
+      },
+      {
+        title: "Webinar",
+        start: `${formatDate(
+          new Date(startOfWeek.setDate(startOfWeek.getDate() + 1))
+        )}T10:00:00`,
+        end: `${formatDate(new Date(startOfWeek))}T12:00:00`,
+        backgroundColor: "#fef08a",
+        borderColor: "#fef08a",
+        textColor: "#713f12",
+      },
+    ];
+
+    const calendarEle = new FullCalendar.Calendar(calendarDiaryCalendar, {
+      initialView: window.innerWidth > 768 ? "timeGridWeek" : "listWeek",
+      headerToolbar: {
+        left: "title prev,next",
+        center: "",
+        right: "",
+      },
+      slotMinTime: "09:00:00", // Start calendar from 9:00 AM
+      slotMaxTime: "18:00:00", // End calendar at 6:00 PM
+      allDaySlot: false, // Disable all-day events row
+      nowIndicator: true, // Highlight the current time
+      events: events,
+      eventDisplay: "block", // Events displayed as blocks
+      eventTimeFormat: {
+        // Customize time format
+        hour: "numeric",
+        minute: "2-digit",
+        meridiem: "short",
+      },
+      height: "auto", // Automatically adjust height
+      contentHeight: "auto",
+      views: {
+        timeGridWeek: {
+          eventMaxHeight: window.innerWidth > 768 ? undefined : 60,
+        },
+      },
+      windowResize: function () {
+        const isMobile = window.innerWidth <= 768;
+        calendarEle.changeView(isMobile ? "listWeek" : "timeGridWeek");
+      },
+    });
+
+    setTimeout(() => {
+      const toolbar = calendarDiaryCalendar.querySelector(
+        ".fc-toolbar-chunk:nth-child(3)"
+      );
+      const selectEl = document.createElement("select");
+      selectEl.className = "calendar-timezone-select";
+      const options = [
+        "(GMT +06:00) Public Time",
+        "(GMT +05:00) Public Time",
+        "(GMT +04:00) Public Time",
+        "(GMT +03:00) Public Time",
+        "(GMT +02:00) Public Time",
+        "(GMT +01:00) Public Time",
+        "(GMT +00:00) Public Time",
+      ];
+
+      options.forEach((month, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = month;
+        if (index === 0) {
+          option.selected = true;
+        }
+        selectEl.appendChild(option);
+      });
+      toolbar.appendChild(selectEl);
+    }, 200);
+
+    calendarEle.render();
+  }
+
+  const calendar_monthly = document.getElementById("calendar-monthly");
+  if (calendar_monthly) {
+    const currentMonthDisplay = document.getElementById("currentMonth");
+    const prevMonthButton = document.getElementById("prevMonth");
+    const nextMonthButton = document.getElementById("nextMonth");
+
+    let currentDate = new Date();
+
+    function renderCalendar(date) {
+      calendar_monthly.innerHTML = `
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Mo</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Tu</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">We</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Th</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Fr</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Sa</div>
+              <div class="twg-text-11px twg-font-medium twg-[#333333]">Su</div>
+          `;
+
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const firstDay = new Date(year, month, 1).getDay();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+      currentMonthDisplay.textContent = date.toLocaleString("default", {
+        month: "long",
+        year: "numeric",
+      });
+
+      // Add empty slots for the first week
+      for (let i = 0; i < (firstDay + 6) % 7; i++) {
+        calendar_monthly.innerHTML += `<div></div>`;
+      }
+
+      // Add days
+      for (let day = 1; day <= daysInMonth; day++) {
+        const isToday =
+          day === new Date().getDate() &&
+          month === new Date().getMonth() &&
+          year === new Date().getFullYear();
+
+        calendar_monthly.innerHTML += `
+                  <div
+                      class="twg-aspect-square twg-text-11px twg-font-medium twg-rounded-full ${
+                        isToday
+                          ? "twg-bg-primary-100 twg-text-white"
+                          : "twg-[#333333]"
+                      } twg-transition-all twg-cursor-pointer hover:twg-bg-primary-100 hover:twg-text-white twg-grid twg-place-items-center"
+                      data-day="${day}">
+                      ${day}
+                  </div>`;
+      }
+    }
+
+    function changeMonth(offset) {
+      currentDate.setMonth(currentDate.getMonth() + offset);
+      renderCalendar(currentDate);
+    }
+
+    prevMonthButton.addEventListener("click", () => changeMonth(-1));
+    nextMonthButton.addEventListener("click", () => changeMonth(1));
+
+    // Initial render
+    renderCalendar(currentDate);
+  }
+
+  const confirm_course_note_text = document.querySelectorAll(
+    ".confirm_course_note_text"
+  );
+
+  if (confirm_course_note_text.length) {
+    confirm_course_note_text.forEach((editorEle) => {
+      const editor = ClassicEditor.create(editorEle).catch((error) => {
+        console.error(error);
+      });
+    });
+  }
+
+  const buttons = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Remove 'active' class from all buttons
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      // Add 'active' class to the clicked button
+      button.classList.add("active");
+
+      // Hide all content
+      contents.forEach((content) => (content.style.display = "none"));
+      // Show the content of the clicked tab
+      const targetId = button.getAttribute("data-target");
+      document.getElementById(targetId).style.display = "block";
+    });
+  });
+
+  // Initialize: Set the first tab as active
+  if (buttons.length > 0) {
+    buttons[0].classList.add("active");
+    contents[0].style.display = "block";
+  }
+
+  // Select the header checkbox and all row checkboxes
+  const selectAllCheckbox = document.getElementById("select-all");
+  const rowCheckboxes = document.querySelectorAll(".row-checkbox");
+
+  if (selectAllCheckbox && rowCheckboxes) {
+    // Add an event listener to the header checkbox
+    selectAllCheckbox.addEventListener("change", function () {
+      const isChecked = selectAllCheckbox.checked;
+      rowCheckboxes.forEach((checkbox) => {
+        checkbox.checked = isChecked;
+      });
+    });
+
+    // Optional: Add an event listener to row checkboxes to update the header checkbox
+    rowCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", function () {
+        const allChecked = Array.from(rowCheckboxes).every((cb) => cb.checked);
+        selectAllCheckbox.checked = allChecked;
+      });
+    });
+  }
 
   setupModalHandlers();
   setupSearchModalHandlers();
@@ -216,8 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupDropdownHandlers();
   setupPasswordViewerHandlers();
   setUpToggleHandlers();
-});
-document.addEventListener("DOMContentLoaded", function () {
+  setupTabsHandlers();
   // Initialize all charts
   initWeeklyChart();
   initStackedBarChart();
@@ -241,30 +551,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const datasets = chartData.flatMap((item) =>
       item.values
         ? item.values.map((stepValue, stepIndex) => ({
-          label: `Step ${stepIndex + 1}`,
-          data: labels.map((day) => (day === "Fri" ? stepValue : 0)),
-          backgroundColor:
-            stepIndex === 0
-              ? "rgba(116, 77, 230, 1)"
-              : stepIndex === 1
+            label: `Step ${stepIndex + 1}`,
+            data: labels.map((day) => (day === "Fri" ? stepValue : 0)),
+            backgroundColor:
+              stepIndex === 0
+                ? "rgba(116, 77, 230, 1)"
+                : stepIndex === 1
                 ? "rgba(250, 149, 243, 1)"
                 : "rgba(250, 219, 92, 1)",
-          barThickness: "flex",
-          maxBarThickness: 100,
-          borderRadius: stepIndex === 2 ? { topLeft: 10, topRight: 10 } : 0,
-          borderWidth: 1,
-          borderColor: "#FFFFFF",
-        }))
+            barThickness: "flex",
+            maxBarThickness: 100,
+            borderRadius: stepIndex === 2 ? { topLeft: 10, topRight: 10 } : 0,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+          }))
         : {
-          label: item.day,
-          data: labels.map((day) => (day === item.day ? item.value : 0)),
-          backgroundColor: "rgba(116, 77, 230, 0.3)",
-          barThickness: "flex",
-          maxBarThickness: 100,
-          borderRadius: 10,
-          borderWidth: 1,
-          borderColor: "#FFFFFF",
-        }
+            label: item.day,
+            data: labels.map((day) => (day === item.day ? item.value : 0)),
+            backgroundColor: "rgba(116, 77, 230, 0.3)",
+            barThickness: "flex",
+            maxBarThickness: 100,
+            borderRadius: 10,
+            borderWidth: 1,
+            borderColor: "#FFFFFF",
+          }
     );
 
     new Chart(ctx, {
@@ -393,181 +703,12 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
+ 
+ 
+// Calender 
   const calendarEl = document.getElementById('calendar');
 
-  const calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: 'dayGridMonth',
-    headerToolbar: {
-      left: 'title',
-      center: '',
-      right: 'scheduleButton searchButton menuButton',
-    },
-    customButtons: {
-      scheduleButton: {
-        text: 'SCHEDULE',
-        click: function () {
-          alert('Schedule button clicked');
-        },
-      },
-      searchButton: {
-        text: '',
-        click: function () {
-          alert('Search button clicked');
-        },
-      },
-      menuButton: {
-        text: '',
-        click: function () {
-          alert('Menu button clicked');
-        },
-      },
-    },
-    events: [
-      { title: 'Conference', start: '2024-12-15', classNames: 'conference' },
-      { title: 'Webinar', start: '2024-12-25T14:00:00', end: '2024-12-25T16:00:00', classNames: 'webinar' },
-      { title: 'Team Lunch', start: '2024-12-12T12:00:00', end: '2024-12-12T13:00:00', classNames: 'team-lunch' },
-      { title: 'Event 1', start: '2025-01-01T08:00:00', end: '2025-01-01T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 1', start: '2025-01-01T11:00:00', end: '2025-01-01T12:00:00', classNames: 'meeting' },
-      { title: 'Event 2', start: '2025-01-02T08:00:00', end: '2025-01-02T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 2', start: '2025-01-02T11:00:00', end: '2025-01-02T12:00:00', classNames: 'meeting' },
-      { title: 'Event 3', start: '2025-01-03T08:00:00', end: '2025-01-03T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 3', start: '2025-01-03T11:00:00', end: '2025-01-03T12:00:00', classNames: 'meeting' },
-      { title: 'Event 4', start: '2025-01-04T08:00:00', end: '2025-01-04T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 4', start: '2025-01-04T11:00:00', end: '2025-01-04T12:00:00', classNames: 'meeting' },
-      { title: 'Event 5', start: '2025-01-05T08:00:00', end: '2025-01-05T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 5', start: '2025-01-05T11:00:00', end: '2025-01-05T12:00:00', classNames: 'meeting' },
-      { title: 'Event 6', start: '2025-01-06T08:00:00', end: '2025-01-06T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 6', start: '2025-01-06T11:00:00', end: '2025-01-06T12:00:00', classNames: 'meeting' },
-      { title: 'Event 7', start: '2025-01-07T08:00:00', end: '2025-01-07T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 7', start: '2025-01-07T11:00:00', end: '2025-01-07T12:00:00', classNames: 'meeting' },
-      { title: 'Class', start: '2025-01-07T14:00:00', end: '2025-01-07T15:00:00', classNames: 'class' },
-      { title: 'Event 8', start: '2025-01-08T08:00:00', end: '2025-01-08T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 8', start: '2025-01-08T11:00:00', end: '2025-01-08T12:00:00', classNames: 'meeting' },
-      { title: 'Event 9', start: '2025-01-09T08:00:00', end: '2025-01-09T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 9', start: '2025-01-09T11:00:00', end: '2025-01-09T12:00:00', classNames: 'meeting' },
-      { title: 'Event 10', start: '2025-01-10T08:00:00', end: '2025-01-10T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 10', start: '2025-01-10T11:00:00', end: '2025-01-10T12:00:00', classNames: 'meeting' },
-      { title: 'Event 11', start: '2025-01-11T08:00:00', end: '2025-01-11T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 11', start: '2025-01-11T11:00:00', end: '2025-01-11T12:00:00', classNames: 'meeting' },
-      { title: 'Event 12', start: '2025-01-12T08:00:00', end: '2025-01-12T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 12', start: '2025-01-12T11:00:00', end: '2025-01-12T12:00:00', classNames: 'meeting' },
-      { title: 'Event 13', start: '2025-01-13T08:00:00', end: '2025-01-13T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 13', start: '2025-01-13T11:00:00', end: '2025-01-13T12:00:00', classNames: 'meeting' },
-      { title: 'Event 14', start: '2025-01-14T08:00:00', end: '2025-01-14T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 14', start: '2025-01-14T11:00:00', end: '2025-01-14T12:00:00', classNames: 'meeting' },
-      { title: 'Event 15', start: '2025-01-15T08:00:00', end: '2025-01-15T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 15', start: '2025-01-15T11:00:00', end: '2025-01-15T12:00:00', classNames: 'meeting' },
-      { title: 'Event 16', start: '2025-01-16T08:00:00', end: '2025-01-16T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 16', start: '2025-01-16T11:00:00', end: '2025-01-16T12:00:00', classNames: 'meeting' },
-      { title: 'Event 17', start: '2025-01-17T08:00:00', end: '2025-01-17T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 17', start: '2025-01-17T11:00:00', end: '2025-01-17T12:00:00', classNames: 'meeting' },
-      { title: 'Event 18', start: '2025-01-18T08:00:00', end: '2025-01-18T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 18', start: '2025-01-18T11:00:00', end: '2025-01-18T12:00:00', classNames: 'meeting' },
-      { title: 'Event 19', start: '2025-01-19T08:00:00', end: '2025-01-19T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 19', start: '2025-01-19T11:00:00', end: '2025-01-19T12:00:00', classNames: 'meeting' },
-      { title: 'Event 20', start: '2025-01-20T08:00:00', end: '2025-01-20T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 20', start: '2025-01-20T11:00:00', end: '2025-01-20T12:00:00', classNames: 'meeting' },
-      { title: 'Event 21', start: '2025-01-21T08:00:00', end: '2025-01-21T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 21', start: '2025-01-21T11:00:00', end: '2025-01-21T12:00:00', classNames: 'meeting' },
-      { title: 'Event 22', start: '2025-01-22T08:00:00', end: '2025-01-22T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 22', start: '2025-01-22T11:00:00', end: '2025-01-22T12:00:00', classNames: 'meeting' },
-      { title: 'Event 23', start: '2025-01-23T08:00:00', end: '2025-01-23T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 23', start: '2025-01-23T11:00:00', end: '2025-01-23T12:00:00', classNames: 'meeting' },
-      { title: 'Event 24', start: '2025-01-24T08:00:00', end: '2025-01-24T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 24', start: '2025-01-24T11:00:00', end: '2025-01-24T12:00:00', classNames: 'meeting' },
-      { title: 'Event 25', start: '2025-01-25T08:00:00', end: '2025-01-25T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 25', start: '2025-01-25T11:00:00', end: '2025-01-25T12:00:00', classNames: 'meeting' },
-      { title: 'Event 26', start: '2025-01-26T08:00:00', end: '2025-01-26T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 26', start: '2025-01-26T11:00:00', end: '2025-01-26T12:00:00', classNames: 'meeting' },
-      { title: 'Event 27', start: '2025-01-27T08:00:00', end: '2025-01-27T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 27', start: '2025-01-27T11:00:00', end: '2025-01-27T12:00:00', classNames: 'meeting' },
-      { title: 'Event 28', start: '2025-01-28T08:00:00', end: '2025-01-28T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 28', start: '2025-01-28T11:00:00', end: '2025-01-28T12:00:00', classNames: 'meeting' },
-      { title: 'Event 29', start: '2025-01-29T08:00:00', end: '2025-01-29T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 29', start: '2025-01-29T11:00:00', end: '2025-01-29T12:00:00', classNames: 'meeting' },
-      { title: 'Event 30', start: '2025-01-30T08:00:00', end: '2025-01-30T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 30', start: '2025-01-30T11:00:00', end: '2025-01-30T12:00:00', classNames: 'meeting' },
-      { title: 'Event 31', start: '2025-01-31T08:00:00', end: '2025-01-31T10:00:00', classNames: 'event-class' },
-      { title: 'Meeting 31', start: '2025-01-31T11:00:00', end: '2025-01-31T12:00:00', classNames: 'meeting' }
-    ],
-    eventTimeFormat: {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    },
-    eventDisplay: 'block',
-    dayMaxEvents: 2,
-    moreLinkClick: 'popover',
-  });
 
-  // Render the custom year and month dropdowns manually
-  setTimeout(() => {
-    const toolbar = document.querySelector('.fc-toolbar-chunk');
-
-    // Year Dropdown
-    const yearSelectEl = document.createElement('select');
-    yearSelectEl.id = 'year-dropdown';
-    yearSelectEl.className = 'calendar-select';
-
-    const currentYear = new Date().getFullYear();
-    const startYear = currentYear - 5;
-    const endYear = currentYear + 5;
-
-    for (let year = startYear; year <= endYear; year++) {
-      const option = document.createElement('option');
-      option.value = year;
-      option.textContent = year;
-      if (year === currentYear) {
-        option.selected = true;
-      }
-      yearSelectEl.appendChild(option);
-    }
-
-    // Month Dropdown
-    const monthSelectEl = document.createElement('select');
-    monthSelectEl.id = 'month-dropdown';
-    monthSelectEl.className = 'calendar-select';
-
-    const currentMonthIndex = new Date().getMonth();
-    const months = ['January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'];
-
-    months.forEach((month, index) => {
-      const option = document.createElement('option');
-      option.value = index;
-      option.textContent = month;
-      if (index === currentMonthIndex) {
-        option.selected = true;
-      }
-      monthSelectEl.appendChild(option);
-    });
-
-    // Append both dropdowns to the toolbar
-    toolbar.appendChild(yearSelectEl);
-    toolbar.appendChild(monthSelectEl);
-
-    // Event listener for year change
-    yearSelectEl.addEventListener('change', function (event) {
-      const selectedYear = event.target.value;
-      const selectedMonth = monthSelectEl.value;
-      calendar.gotoDate(new Date(selectedYear, selectedMonth, 1));
-    });
-
-    // Event listener for month change
-    monthSelectEl.addEventListener('change', function (event) {
-      const selectedMonth = event.target.value;
-      const selectedYear = yearSelectEl.value;
-      calendar.gotoDate(new Date(selectedYear, selectedMonth, 1));
-    });
-
-  }, 200);
-
-  calendar.render();
 });
 
 
