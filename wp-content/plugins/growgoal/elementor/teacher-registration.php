@@ -3,14 +3,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-class GrowGoal_student_registration extends \Elementor\Widget_Base {
+class GrowGoal_teacher_registration extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'growgoal_student_registration';
+        return 'growgoal_teacher_registration';
     }
 
     public function get_title() {
-        return __( 'GrowGoal ST Registration', 'growgoal' );
+        return __( 'GrowGoal T Registration', 'growgoal' );
     }
 
     public function get_icon() {
@@ -30,7 +30,7 @@ class GrowGoal_student_registration extends \Elementor\Widget_Base {
         ?>
         <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
         <?php
-        include GROWGOAL_PLUGIN_DIR . 'elementor/forms/st-sign-up.php';
+        include GROWGOAL_PLUGIN_DIR . 'elementor/forms/t-sign-up.php';
     }
 
 }

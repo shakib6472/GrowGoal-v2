@@ -31,11 +31,15 @@
         // Elementor widget registration code here
         require_once GROWGOAL_PLUGIN_DIR . 'elementor/login-form.php';
         require_once GROWGOAL_PLUGIN_DIR . 'elementor/student-registration.php';
+        require_once GROWGOAL_PLUGIN_DIR . 'elementor/teacher-registration.php';
         require_once GROWGOAL_PLUGIN_DIR . 'elementor/st-dashboard.php';
+        require_once GROWGOAL_PLUGIN_DIR . 'elementor/t-dashboard.php';
         
         $widgets_manager->register( new \GrowGoal_login_form() );
         $widgets_manager->register( new \GrowGoal_student_registration() );
+        $widgets_manager->register( new \GrowGoal_teacher_registration() );
         $widgets_manager->register( new \GrowGoal_student_dashboard() );
+        $widgets_manager->register( new \GrowGoal_teacher_dashboard() );
 
     }
 }
