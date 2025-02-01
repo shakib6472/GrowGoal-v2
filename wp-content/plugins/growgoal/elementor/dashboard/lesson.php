@@ -1,7 +1,7 @@
 <main class="twg-flex-1 twg-flex twg-flex-col  lg:twg-max-h-[calc(100svh-90px)] max-lg:twg-max-h-[calc(100svh-69px)] ">
   <section class="twg-flex-1 twg-pt-5 twg-flex twg-h-full lg:twg-pr-4 max-lg:twg-flex-col max-lg:twg-overflow-y-auto max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section">
 
-  <?php include GROWGOAL_PLUGIN_DIR . 'elementor/dashboard/parts/menu.php'; ?>
+  <?php echo student_menu($settings['dashboard_page']); ?>
 
     <div
       class="twg-lesson-content twg-main-wrapper-content lg:twg-flex-1 lg:twg-overflow-y-auto lg:twg-pl-5 lg:twg-pr-3 max-lg:!twg-mt-0">

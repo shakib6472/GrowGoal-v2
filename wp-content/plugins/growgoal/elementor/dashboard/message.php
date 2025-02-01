@@ -1,11 +1,10 @@
-<main
-    class="twg-flex-1 twg-flex twg-flex-col  lg:twg-max-h-[calc(100vh-90px)] max-lg:twg-max-h-[calc(100vh-69px)] ">
+<main class="twg-flex-1 twg-flex twg-flex-col  lg:twg-max-h-[calc(100vh-90px)] max-lg:twg-max-h-[calc(100vh-69px)] ">
 
 
 
     <section
         class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section">
-        <?php include GROWGOAL_PLUGIN_DIR . 'elementor/dashboard/parts/menu.php'; ?>
+        <?php echo student_menu($settings['dashboard_page']); ?>
         <div
             class="twg-main-wrapper-content lg:twg-flex-1 twg-flex twg-flex-col lg:twg-px-5 max-lg:!twg-mt-0">
             <h1 class="main-heading">Messages</h1>
@@ -20,7 +19,7 @@
                         <div class="twg-space-y-5">
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-1.png" class="twg-size-full" alt="Killan James" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-1.png'; ?>" class="twg-size-full" alt="Killan James" />
                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
@@ -36,7 +35,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-2.png" class="twg-size-full" alt="Design
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-2.png'; ?>" class="twg-size-full" alt="Design
             Team" />
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
@@ -52,7 +51,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="Ahmed Medi" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-3.png'; ?>" class="twg-size-full" alt="Ahmed Medi" />
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
                                     <div>
@@ -70,7 +69,7 @@
                                 </svg> <span class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500">All Message</span> </div>
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-4.png" class="twg-size-full" alt="Claudia Maudi" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-4.png'; ?>" class="twg-size-full" alt="Claudia Maudi" />
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
                                     <div>
@@ -85,7 +84,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-5.png" class="twg-size-full" alt="Novita" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-5.png'; ?>" class="twg-size-full" alt="Novita" />
                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
@@ -101,7 +100,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-6.png" class="twg-size-full" alt="Milie Nose" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-6.png'; ?>" class="twg-size-full" alt="Milie Nose" />
                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
@@ -117,7 +116,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-7.png" class="twg-size-full" alt="Ikhsan SD" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-7.png'; ?>" class="twg-size-full" alt="Ikhsan SD" />
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
                                     <div>
@@ -135,7 +134,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-8.png" class="twg-size-full" alt="Aditya" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-8.png'; ?>" class="twg-size-full" alt="Aditya" />
                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
@@ -151,7 +150,7 @@
 
 
                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="Ahmed Medi" />
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-3.png'; ?>" class="twg-size-full" alt="Ahmed Medi" />
                                 </div>
                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
                                     <div>
@@ -172,23 +171,23 @@
                     <div class="twg-flex-1 lg:twg-h-full lg:twg-overflow-y-auto">
                         <div class="md:twg-px-5 twg-flex twg-items-end twg-gap-5 twg-justify-between lg:twg-sticky lg:twg-top-0 lg:twg-z-9 twg-bg-accent-100 twg-pb-2">
                             <div class="twg-flex twg-items-center twg-gap-3">
-                                <div class="md:twg-size-60px max-md:twg-size-45px twg-rounded-full twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-1.png" class="twg-size-full" alt="" /> </div>
+                                <div class="md:twg-size-60px max-md:twg-size-45px twg-rounded-full twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-1.png'; ?>" class="twg-size-full" alt="" /> </div>
                                 <div class="twg-relative">
                                     <h3 class="lg:twg-text-30px mm-md-lg:twg-text-25px max-md:twg-text-22px twg-font-medium twg-text-dark-100 twg-leading-none twg-mb-3px"> Design Team </h3>
                                     <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500"> 60 member, 10 online </p>
                                 </div>
                             </div>
                             <div class="twg-flex -twg-space-x-2">
-                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="../../../assets/images/messages-icon-dp-1.png" class="twg-size-full" alt="" /> </div>
-                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="../../../assets/images/messages-icon-dp-2.png" class="twg-size-full" alt="" /> </div>
-                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="" /> </div>
+                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-1.png'; ?>" class="twg-size-full" alt="" /> </div>
+                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-2.png'; ?>" class="twg-size-full" alt="" /> </div>
+                                <div class="twg-size-28px twg-rounded-full twg-overflow-hidden twg-border-2 twg-border-accent-100 twg-cursor-pointer twg-transition-transform twg-duration-300 twg-ease-linear hover:twg-scale-110"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-3.png'; ?>" class="twg-size-full" alt="" /> </div>
                             </div>
                         </div>
                         <div class="twg-relative twg-mt-5">
                             <div class="md:twg-px-5">
                                 <div class="lg:twg-max-w-80/100">
                                     <div class="twg-flex twg-gap-3">
-                                        <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-1.png" class="twg-size-full" alt="" /> </div>
+                                        <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-1.png'; ?>" class="twg-size-full" alt="" /> </div>
                                         <div class="twg-flex-1 twg-space-y-2">
                                             <div class="twg-flex twg-items-center twg-gap-6">
                                                 <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Killan James </h4>
@@ -238,7 +237,7 @@
                                         </div>
                                     </div>
                                     <div class="twg-flex twg-gap-3">
-                                        <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-2.png" class="twg-size-full" alt="" /> </div>
+                                        <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-2.png'; ?>" class="twg-size-full" alt="" /> </div>
                                         <div class="twg-flex-1 twg-space-y-2">
                                             <div class="twg-flex twg-items-center twg-gap-6">
                                                 <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Claudia Maudi </h4>
@@ -279,9 +278,9 @@
                                                 </div>
                                             </div>
                                             <div class="twg-grid twg-grid-cols-3 twg-gap-3 twg-pb-6px">
-                                                <div class="twg-rounded-12px twg-overflow-hidden twg-shadow-md twg-cursor-pointer"> <img src="../../../assets/images/inbox-image-1.png" class="twg-w-full twg-object-cover" alt="" /> </div>
+                                                <div class="twg-rounded-12px twg-overflow-hidden twg-shadow-md twg-cursor-pointer"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/inbox-image-1.png'; ?>" class="twg-w-full twg-object-cover" alt="" /> </div>
 
-                                                <div class="twg-rounded-12px twg-overflow-hidden twg-shadow-md twg-cursor-pointer"> <img src="../../../assets/images/inbox-image-2.png" class="twg-w-full twg-object-cover" alt="" /> </div>
+                                                <div class="twg-rounded-12px twg-overflow-hidden twg-shadow-md twg-cursor-pointer"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/inbox-image-2.png'; ?>" class="twg-w-full twg-object-cover" alt="" /> </div>
                                             </div>
                                         </div>
                                     </div>
@@ -311,11 +310,11 @@
                                         </div>
                                     </div>
                                     <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> 
-                                        <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="" /> </div>
+                                        <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-3.png'; ?>" class="twg-size-full" alt="" /> </div>
                                 </div>
                                 <div class="twg-flex twg-gap-3">
                                     <div class="twg-size-34px twg-rounded-full twg-overflow-hidden"> 
-                                        <img src="../../../assets/images/messages-icon-dp-4.png" class="twg-size-full" alt="" /> </div>
+                                        <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-4.png'; ?>" class="twg-size-full" alt="" /> </div>
                                     <div class="twg-flex-1 twg-space-y-2">
                                         <div class="twg-flex twg-items-center twg-gap-6">
                                             <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Killan James </h4>
@@ -376,7 +375,7 @@
                     </div>
                     <div class="md:twg-p-5 lg:twg-max-w-276px twg-w-full lg:twg-bg-light-400 max-lg:twg-mt-4 twg-flex twg-flex-col lg:twg-h-full lg:twg-overflow-y-auto twg-hide-scrollbar">
                         <div class="twg-flex twg-flex-col twg-justify-center twg-items-center twg-text-center twg-gap-3">
-                            <div class="twg-size-94px twg-rounded-full twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-6.png" class="twg-size-full" alt="" /> </div>
+                            <div class="twg-size-94px twg-rounded-full twg-overflow-hidden"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-6.png'; ?>" class="twg-size-full" alt="" /> </div>
                             <div class="twg-relative twg-space-y-2">
                                 <h3 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Killan James </h3>
                                 <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500 twg-font-medium"> @killan james </p>
@@ -389,28 +388,28 @@
                                 <div class="twg-mt-4 twg-w-full dropdown-menu dropdown-menu-always-open">
                                     <div class="twg-space-y-18px">
                                         <div class="twg-flex twg-items-center twg-gap-2">
-                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="../../../assets/images/attachment-icon-1.png" class="twg-h-25px" alt="" /> </div>
+                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/attachment-icon-1.png'; ?>" class="twg-h-25px" alt="" /> </div>
                                             <div class="twg-flex-1">
                                                 <h5 class="lg:twg-text-14px max-lg:twg-text-13px twg-font-medium twg-text-dark-100"> Very important file.figma </h5>
                                                 <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> 7.5 MB 3.22.22, 11:15 AM </p>
                                             </div>
                                         </div>
                                         <div class="twg-flex twg-items-center twg-gap-2">
-                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="../../../assets/images/attachment-icon-2.png" class="twg-h-25px" alt="" /> </div>
+                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/attachment-icon-2.png'; ?>" class="twg-h-25px" alt="" /> </div>
                                             <div class="twg-flex-1">
                                                 <h5 class="lg:twg-text-14px max-lg:twg-text-13px twg-font-medium twg-text-dark-100"> Some file. scratch </h5>
                                                 <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> 7.5 MB 3.22.22, 11:15 AM </p>
                                             </div>
                                         </div>
                                         <div class="twg-flex twg-items-center twg-gap-2">
-                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="../../../assets/images/attachment-icon-3.png" class="twg-h-25px" alt="" /> </div>
+                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/attachment-icon-3.png'; ?>" class="twg-h-25px" alt="" /> </div>
                                             <div class="twg-flex-1">
                                                 <h5 class="lg:twg-text-14px max-lg:twg-text-13px twg-font-medium twg-text-dark-100"> List of someting. xd </h5>
                                                 <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> 7.5 MB 3.22.22, 11:15 AM </p>
                                             </div>
                                         </div>
                                         <div class="twg-flex twg-items-center twg-gap-2">
-                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="../../../assets/images/attachment-icon-4.png" class="twg-h-25px" alt="" /> </div>
+                                            <div class="twg-size-10 twg-p-2 twg-grid twg-place-items-center twg-bg-dark-100 twg-text-accent-100 twg-rounded-full"> <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/attachment-icon-4.png'; ?>" class="twg-h-25px" alt="" /> </div>
                                             <div class="twg-flex-1">
                                                 <h5 class="lg:twg-text-14px max-lg:twg-text-13px twg-font-medium twg-text-dark-100"> Very important fil.svg </h5>
                                                 <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> 7.5 MB 3.22.22, 11:15 AM </p>

@@ -13,14 +13,11 @@
     public function init() {
         // Initialization code here
         error_log('GrowGoal class initialized');
-
     }
-
     public function activate() {
         // Activation code here
         error_log('Activated');
     }
-
     public function deactivate() {
         // Deactivation code here
         error_log('Deactivated');
@@ -40,6 +37,7 @@
         $widgets_manager->register( new \GrowGoal_teacher_registration() );
         $widgets_manager->register( new \GrowGoal_student_dashboard() );
         $widgets_manager->register( new \GrowGoal_teacher_dashboard() );
-
     }
 }
+
+

@@ -115,6 +115,11 @@ jQuery(document).ready(function ($) {
             });
         }
     });
+
+    $('.wp-logout').click(function (e) { 
+        e.preventDefault();
+        window.location.href = growgoal_ajax.logout_url
+    });
 });
 
 

@@ -36,18 +36,19 @@ function growgoal_enqueue_scripts()
 	wp_enqueue_style('growgoal-fontowsomea-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '1.0.0', 'all');
 
 	wp_enqueue_script('jquery');
+	wp_enqueue_script('growgoal-fullcalender-script', 'https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js', array(), '1.0.0', true);
+	wp_enqueue_script('growgoal-lottie-script', 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs', array(), '2.7.12', false);
+	wp_enqueue_script('growgoal-chart-script', 'https://cdn.jsdelivr.net/npm/chart.js', array(), '1.0.0', true);
 	wp_enqueue_script('growgoal-functions-script', GROWGOAL_PLUGIN_URL . 'elementor/assets/js/functions.js', array('jquery'), '1.0.0', true);
 	wp_enqueue_script('growgoal-script', GROWGOAL_PLUGIN_URL . 'elementor/assets/js/growgoal.js', array('jquery'), '1.0.0', true);
 	wp_enqueue_script('growgoal-tail-script', GROWGOAL_PLUGIN_URL . 'elementor/assets/js/script.js', array('jquery'), '1.0.0', true);
-	wp_enqueue_script('growgoal-lottie-script', 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs', array(), '2.7.12', false);
-	wp_enqueue_script('growgoal-fullcalender-script', 'https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js', array(), '1.0.0', true);
-	wp_enqueue_script('growgoal-chart-script', 'https://cdn.jsdelivr.net/npm/chart.js', array(), '1.0.0', true);
 	// localizing script
 	wp_localize_script('growgoal-script', 'growgoal_ajax', array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'nonce' => wp_create_nonce('growgoal_nonce'),
 		'home_url' => home_url(),
 		'admin_url' => admin_url(),
+		'logout_url' => wp_logout_url(home_url()),
 	));
 }
 add_action('wp_enqueue_scripts', 'growgoal_enqueue_scripts');

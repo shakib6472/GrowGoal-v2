@@ -705,8 +705,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
  
  
-// Calender 
-  const calendarEl = document.getElementById('calendar');
+
 
 
 });
