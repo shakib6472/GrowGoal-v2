@@ -5,7 +5,7 @@
             class="twg-header-sidebar-button lg:twg-hidden md:twg-size-40px max-md:twg-size-35px twg-rounded-full twg-bg-light-400 twg-overflow-hidden twg-grid twg-place-items-center twg-relative">
             <i class="fa-solid fa-bars"></i>
         </button>
-        <a href="/pages/student/">
+        <a href="<?php echo home_url(); ?>">
             <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/GrowGoal-Dark-Logo-Sm.svg'; ?>" class="mm-md-lg:twg-h-11 max-md:twg-h-9 max-lg:twg-w-auto"
                 alt="" />
         </a>

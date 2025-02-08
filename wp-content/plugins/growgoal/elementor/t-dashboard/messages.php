@@ -2,9 +2,7 @@
      <section class="twg-flex-1 twg-pt-5 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-px-4 max-lg:twg-space-y-6 max-lg:twg-pb-5 twg-relative twg-main-content-section">
 
          <!-- Menuber --> 
-          <?php include GROWGOAL_PLUGIN_DIR . 'elementor/t-dashboard/parts/menu.php'; ?>
-
-
+          <?php include GROWGOAL_PLUGIN_DIR . 'elementor/t-dashboard/parts/menu.php'; ?> 
          <div class="twg-main-wrapper-content lg:twg-flex-1 twg-flex twg-flex-col lg:twg-px-5 max-lg:!twg-mt-0">
              <h1 class="main-heading">Messages</h1>
              <div class="twg-mt-5 twg-flex twg-items-stretch lg:twg-flex-1 lg:twg-h-[calc(100svh-160px)] max-lg:twg-h-[calc(100svh-140px)] max-lg:twg-flex-wrap">
@@ -14,135 +12,24 @@
                          <div class="twg-relative twg-text-light-500"> <input type="text" class="twg-h-48px twg-w-full md:twg-bg-accent-100 max-md:twg-bg-light-400 twg-rounded-10px twg-text-16px twg-pl-45px !twg-border-none !twg-ring-0 !twg-shadow-none !twg-outline-none" placeholder="Search..." /> <i class="fa-solid fa-magnifying-glass twg-absolute twg-top-50/100 -twg-translate-y-1/2 twg-left-4"></i> </div>
                      </div>
                      <div class="twg-relative twg-flex-1">
-                         <div class="twg-space-y-5">
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-1.png" class="twg-size-full" alt="Killan James" />
-                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Killan James </h4>
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-success-600"> Typing... </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 4:30 PM </p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-2.png" class="twg-size-full" alt="Design          Team" />
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Design Team </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> Hello! Everyone </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 9:36 AM </p> <span class="twg-size-18px twg-text-center twg-ml-auto twg-grid twg-place-items-center twg-leading-none twg-rounded-full twg-bg-secondary-100 twg-text-dark-100 twg-text-12px twg-font-medium">2</span>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="Ahmed Medi" />
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Ahmed Medi </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> Wow really Cool 🔥 </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 1:15 AM </p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="twg-flex twg-items-center twg-gap-2"> <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0.242396 2.49407C0.42974 1.40644 1.29425 0.606925 2.38534 0.440908C3.43079 0.281838 4.86497 0.125 6.456 0.125C8.04702 0.125 9.48121 0.281838 10.5267 0.440908C11.6177 0.606925 12.4823 1.40643 12.6696 2.49407C12.8002 3.2521 12.912 4.21504 12.912 5.2898C12.912 6.36456 12.8002 7.32749 12.6696 8.08552C12.4823 9.17316 11.6177 9.97267 10.5267 10.1387C9.57024 10.2842 8.28847 10.4279 6.8589 10.4513L2.91083 12.7842C2.48047 13.0385 1.9368 12.7283 1.9368 12.2284V10.0311C1.06302 9.7405 0.403215 9.01917 0.242396 8.08552C0.111825 7.32749 0 6.36456 0 5.2898C0 4.21504 0.111825 3.2521 0.242396 2.49407ZM2.5824 3.9986C2.5824 3.64204 2.87144 3.353 3.228 3.353H9.684C10.0406 3.353 10.3296 3.64204 10.3296 3.9986C10.3296 4.35515 10.0406 4.6442 9.684 4.6442H3.228C2.87144 4.6442 2.5824 4.35515 2.5824 3.9986ZM2.5824 6.581C2.5824 6.22444 2.87144 5.9354 3.228 5.9354H5.8104C6.16695 5.9354 6.456 6.22444 6.456 6.581C6.456 6.93755 6.16695 7.2266 5.8104 7.2266H3.228C2.87144 7.2266 2.5824 6.93755 2.5824 6.581Z" fill="#6B6B6C" />
-                                 </svg> <span class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500">All Message</span> </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-4.png" class="twg-size-full" alt="Claudia Maudi" />
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Claudia Maudi </h4>
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-success-600"> Typing... </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 4:30 PM </p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-5.png" class="twg-size-full" alt="Novita" />
-                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Novita </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> yah, nice design </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 4:30 PM </p> <span class="twg-size-18px twg-text-center twg-ml-auto twg-grid twg-place-items-center twg-leading-none twg-rounded-full twg-bg-secondary-100 twg-text-dark-100 twg-text-12px twg-font-medium">2</span>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-6.png" class="twg-size-full" alt="Milie Nose" />
-                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Milie Nose </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> Awesome 🔥 </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 8:20 PM </p> <span class="twg-size-18px twg-text-center twg-ml-auto twg-grid twg-place-items-center twg-leading-none twg-rounded-full twg-bg-secondary-100 twg-text-dark-100 twg-text-12px twg-font-medium">1</span>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-7.png" class="twg-size-full" alt="Ikhsan SD" />
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Ikhsan SD </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500 twg-flex twg-gap-1 twg-items-center"> <!-- <i class="fa-solid fa-microphone"></i> --> <svg width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="twg-h-14px">
-                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.708333 6.875C1.09953 6.875 1.41667 7.19213 1.41667 7.58333V8.29167C1.41667 10.6389 3.31946 12.5417 5.66667 12.5417C8.01388 12.5417 9.91667 10.6389 9.91667 8.29167V7.58333C9.91667 7.19213 10.2338 6.875 10.625 6.875C11.0162 6.875 11.3333 7.19213 11.3333 7.58333V8.29167C11.3333 11.1814 9.1703 13.5659 6.375 13.9145V16.0833H8.5C8.8912 16.0833 9.20833 16.4005 9.20833 16.7917C9.20833 17.1829 8.8912 17.5 8.5 17.5H6.375H4.95833H2.83333C2.44213 17.5 2.125 17.1829 2.125 16.7917C2.125 16.4005 2.44213 16.0833 2.83333 16.0833H4.95833V13.9145C2.16303 13.5659 0 11.1814 0 8.29167V7.58333C0 7.19213 0.317132 6.875 0.708333 6.875Z" fill="currentColor" />
-                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.08276 8.29167V3.33333C7.08276 2.55093 6.4485 1.91667 5.6661 1.91667C4.88369 1.91667 4.24943 2.55093 4.24943 3.33333V8.29167C4.24943 9.07407 4.88369 9.70833 5.6661 9.70833C6.4485 9.70833 7.08276 9.07407 7.08276 8.29167ZM5.6661 0.5C4.10129 0.5 2.83276 1.76853 2.83276 3.33333V8.29167C2.83276 9.85647 4.10129 11.125 5.6661 11.125C7.2309 11.125 8.49943 9.85647 8.49943 8.29167V3.33333C8.49943 1.76853 7.2309 0.5 5.6661 0.5Z" fill="currentColor" />
-                                             </svg> <span>Voice message</span> </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> yesterday </p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-8.png" class="twg-size-full" alt="Aditya" />
-                                     <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px"></div>
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Aditya </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> publish now </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> yesterday </p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
-                                 <div class="twg-relative twg-size-50px twg-overflow-hidden"> <img src="../../../assets/images/messages-icon-dp-3.png" class="twg-size-full" alt="Ahmed Medi" />
-                                 </div>
-                                 <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
-                                     <div>
-                                         <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Ahmed Medi </h4>
-                                         <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> Wow really Cool 🔥 </p>
-                                     </div>
-                                     <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
-                                         <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> 1:15 AM </p>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                     <div class="twg-space-y-5">
+                            <div data-target=".twg-message-wrapper" class="twg-message-open-btn twg-flex twg-gap-12px twg-items-center twg-cursor-pointer">
+                                <div class="twg-relative twg-size-50px twg-overflow-hidden">
+                                    <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/messages-icon-dp-8.png'; ?>" class="twg-size-full" alt="Aditya" />
+                                    <div class="twg-size-12px twg-rounded-full twg-bg-success-500 twg-border-3 twg-border-accent-100 twg-absolute twg-right-0px twg-bottom-3px">
+                                    </div>
+                                </div>
+                                <div class="twg-flex-1 twg-flex twg-justify-between twg-gap-2">
+                                    <div>
+                                        <h4 class="lg:twg-text-16px max-lg:twg-text-14px twg-font-bold twg-text-dark-100"> Aditya </h4>
+                                        <p class="lg:twg-text-13px max-lg:twg-text-12px twg-text-light-500"> publish now </p>
+                                    </div>
+                                    <div class="twg-flex twg-flex-col twg-items-end twg-text-right">
+                                        <p class="lg:twg-text-14px max-lg:twg-text-12px twg-text-light-500 twg-whitespace-nowrap"> yesterday </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                      </div>
                  </div>
                  <div class="twg-flex-1 twg-flex twg-h-full max-lg:twg-flex-col max-lg:twg-overflow-y-auto twg-message-wrapper max-md:twg-hidden">

@@ -1,3 +1,29 @@
+<?php
+
+/**
+ * Header template
+ * 
+ * @package GrowGoal
+ * @since 1.0.0
+ * @subpackage Dashbaord/Header
+ */
+
+$user = wp_get_current_user();
+$user_id = $user->ID;
+$first_name = get_user_meta($user_id, 'first_name', true);
+$last_name = get_user_meta($user_id, 'last_name', true);
+$full_name = $first_name . ' ' . $last_name;
+$nickname = $user->user_nicename;
+$display_name = $user->display_name;
+$username = $user->user_login;
+$student_name = $full_name ? $full_name : $display_name;
+$profile_image = get_user_meta($user_id, 'profile_image', true);
+$profile_image_url = wp_get_attachment_image_url($profile_image, 'thumbnail');
+$profile_image_url = $profile_image_url ? $profile_image_url : GROWGOAL_PLUGIN_URL . 'elementor/assets/images/header-profile.png';
+$email = $user->user_email;
+
+?>
+
 <header class="twg-relative twg-py-3 twg-z-99">
     <div
         class="twg-max-w-[1340px] twg-px-4 twg-mx-auto twg-flex twg-items-center twg-justify-between lg:twg-gap-5 mm-sm-lg:twg-gap-3 max-sm:twg-gap-2">
@@ -5,7 +31,7 @@
             class="twg-header-sidebar-button lg:twg-hidden md:twg-size-40px max-md:twg-size-35px twg-rounded-full twg-bg-light-400 twg-overflow-hidden twg-grid twg-place-items-center twg-relative">
             <i class="fa-solid fa-bars"></i>
         </button>
-        <a href="/pages/student/">
+        <a href="<?php echo home_url(); ?>">
             <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/GrowGoal-Dark-Logo-Sm.svg'; ?>" class="mm-md-lg:twg-h-11 max-md:twg-h-9 max-lg:twg-w-auto"
                 alt="" />
         </a>
@@ -288,8 +314,8 @@
                 <button class="dropdown-action twg-flex twg-items-center lg:twg-gap-3 max-lg:twg-gap-1">
                     <img src="<?php echo GROWGOAL_PLUGIN_URL . 'elementor/assets/images/header-profile.png'; ?>" class="lg:twg-size-50px mm-md-lg:twg-size-40px max-md:twg-size-35px twg-rounded-full twg-object-cover" alt="Profile" />
                     <div class="twg-space-y-0 max-lg:twg-hidden twg-text-left">
-                        <h4 class="twg-text-16px twg-text-dark-100">John Doe</h4>
-                        <p class="twg-text-14px twg-font-medium twg-text-light-300"> johndoe34@gmail.com </p>
+                        <h4 class="twg-text-16px twg-text-dark-100"><?php echo $student_name; ?></h4>
+                        <p class="twg-text-14px twg-font-medium twg-text-light-300"><?php echo $email; ?></p>
                     </div>
                     <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="twg-ml-1">
                         <path d="M1.5 1.38818L6.5 6.38818L11.5 1.38818" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -298,9 +324,9 @@
                 <div
                     class="twg-absolute twg-top-full twg-right-0 twg-min-w-140px twg-w-full twg-bg-white twg-shadow-md twg-rounded-md twg-hidden dropdown-menu twg-z-50">
                     <ul class="twg-list-none twg-p-3 twg-space-y-2">
-                        <li class="twg-text-lg twg-text-dark-100 twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70"> <i class="fa-solid fa-user"></i> <span>Profile</span> </li>
-                        <li class="twg-text-lg twg-text-dark-100 twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70"> <i class="fa-solid fa-gear"></i> <span>Settings</span> </li>
-                        <li class="twg-text-lg twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70 twg-text-red-500"> <i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout</span> </li>
+                        <li class="twg-text-lg twg-text-dark-100 twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70"> <a href="#"> <i class="fa-solid fa-user"></i> <span>Profile</span></a> </li>
+                        <li class="twg-text-lg twg-text-dark-100 twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70"><a href="#"> <i class="fa-solid fa-gear"></i> <span>Settings</span> </a> </li>
+                        <li class="twg-text-lg twg-py-1 twg-cursor-pointer twg-flex twg-items-center twg-gap-2 twg-transition-opacity twg-duration-300 twg-ease-linear hover:twg-opacity-70 twg-text-red-500"> <a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout</span></a> </li>
                     </ul>
                 </div>
             </div>
